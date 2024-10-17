@@ -51,7 +51,7 @@ synapse_reports/
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/synapse_reports.git
+   git clone git clone https://AndersonJSilva@bitbucket.org/andersonjsilva/relatorio-pushs-synapse.git
    cd synapse_reports
    ```
 
