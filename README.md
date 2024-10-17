@@ -71,10 +71,18 @@ synapse_reports/
 
 ## Como Executar
 
-Para rodar o projeto, use o seguinte comando:
+Para rodar o projeto, use os seguintes comandos:
+
+Dev:
 
 ```bash
 poetry run python app.py
+```
+
+Prod:
+
+```bash
+poetry run gunicorn --workers 3 app:app
 ```
 
 ## Estrutura Modular
