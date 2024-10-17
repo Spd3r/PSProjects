@@ -76,7 +76,7 @@ Para rodar o projeto, use os seguintes comandos:
 Dev:
 
 ```bash
-poetry run python app.py
+poetry run python app.py --debug
 ```
 
 Prod:
