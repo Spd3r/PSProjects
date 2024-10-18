@@ -62,8 +62,6 @@ class SFTPUploader:
             text = f"Diretório remoto {self.remote_dir} criado com sucesso!"
             self.log.post_log(text, "info")
             print(text)
-            self.close()
-            exit(1)
 
     def upload_file(self, local_file_path, remote_file_path):
         """Faz o upload do arquivo para o servidor remoto."""
