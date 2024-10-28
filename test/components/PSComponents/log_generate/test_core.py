@@ -1,4 +1,4 @@
-from wake.sftp_uploader import core
+from PSComponents.log_generate import core
 
 
 def test_sample():

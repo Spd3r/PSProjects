@@ -1,5 +1,5 @@
 [tool.polylith]
-namespace = "wake"
+namespace = "PSComponents"
 git_tag_pattern = "stable-*"
 
 [tool.polylith.structure]
@@ -14,3 +14,13 @@ brick_docs_enabled = false
 
 [tool.polylith.test]
 enabled = true
+
+[workspace]
+projects = ["projects/synapse_report_api"]
+components = ["components/PSComponents/apiClient",
+              "components/PSComponents/config",
+              "components/PSComponents/csv_generator",
+              "components/PSComponents/log_generate",
+              "components/PSComponents/report_manager",
+              "components/PSComponents/s3_uploader",
+              "components/PSComponents/sftp_uploader"]

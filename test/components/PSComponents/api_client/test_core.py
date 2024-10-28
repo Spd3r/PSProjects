@@ -1,4 +1,4 @@
-from wake.config import core
+from PSComponents.api_client import core
 
 
 def test_sample():

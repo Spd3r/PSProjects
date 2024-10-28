@@ -1,13 +1,13 @@
 import os
-from datetime import datetime, timedelta
 import posixpath
+from datetime import datetime, timedelta
 from flask import jsonify
 
-from components.wake.api_client import APIClient
-from components.wake.csv_generator import CSVGenerator
-from components.wake.sftp_uploader import SFTPUploader
-from components.wake.s3_uploader import S3Uploader
-from components.wake.log_generate import Log
+from components.PSComponents.apiClient import APIClient
+from components.PSComponents.csv_generator import CSVGenerator
+from components.PSComponents.sftp_uploader import SFTPUploader
+from components.PSComponents.s3_uploader import S3Uploader
+from components.PSComponents.log_generate import Log
 
 
 class ReportManager:
@@ -92,10 +92,12 @@ class ReportManager:
         # s3_uploader.list_directory(self.config.s3_access["bucket"], self.config.s3_access["prefix"], "/")
 
         text = f'Total de registros processados: {processed_data}'
+        path = f'Arquivo salvo em {remote_file_path}'
 
         self.logs.post_log(text, "info")
 
         return jsonify({
             "status": text,
+            "path": path,
             "error": False,
         }), 200

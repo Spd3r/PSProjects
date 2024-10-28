@@ -1,4 +1,4 @@
-from wake.api_client import core
+from PSComponents.s3_uploader import core
 
 
 def test_sample():

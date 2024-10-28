@@ -1,5 +1,5 @@
-from components.wake.config import Config
-from core.core import ReportManager
+from components.PSComponents.config import Config
+from components.PSComponents.report_manager import ReportManager
 from flask import Flask, request, jsonify
 
 

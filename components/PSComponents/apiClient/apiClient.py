@@ -3,7 +3,7 @@ import json
 
 
 from tqdm import tqdm
-from components.wake.log_generate import Log
+from components.PSComponents.log_generate import Log
 
 
 class APIClient:

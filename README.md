@@ -1,42 +1,54 @@
 
-# Synapse Reports
-
-## Descrição
-
-O projeto **Synapse Reports** tem como objetivo consumir dados da plataforma Synapse, processá-los e gerar relatórios em formatos definidos. A aplicação possui componentes modulares e utiliza a arquitetura **Polylith** para gerenciar e escalar facilmente os módulos e funcionalidades.
+# PSProjects
 
 ## Estrutura do Projeto
 
 ```plaintext
-synapse_reports/
+PSProjects/
 ├── .gitignore
-├── .env                        # Configurações de variáveis de ambiente
-├── app.py                      # Ponto de entrada da aplicação
-├── requirements.txt            # Dependências do projeto
+├── LICENSE
 ├── pyproject.toml              # Arquivo de configuração do Poetry
 ├── workspace.toml              # Arquivo de configuração do workspace (Polylith)
-├── core/                       # Módulo principal do projeto
-│   ├── __init__.py
-│   ├── core_module_1.py
-│   ├── core_module_2.py
+├── README.md
+├── poetry.lock
+├── requirements.txt            # Dependências do projeto
+├── .flake8
+├── setup.sh
+├── start.sh
+├── bases/                      # Diretório base
+│   ├── .keep
 ├── components/                 # Componentes independentes
-│   ├── __init__.py
-│   ├── component_1.py
-│   ├── component_2.py
+│   ├── api_client/
+│   │   ├── __init__.py
+│   │   ├── api_client.py
+│   ├── config/
+│   │   ├── __init__.py
+│   │   ├── config.py
+│   ├── csv_generator/
+│   │   ├── __init__.py
+│   │   ├── csv_generator.py
+│   ├── s3_uploader/
+│   │   ├── __init__.py
+│   │   ├── s3_uploader.py
+│   ├── sftp_uploader/
+│   │   ├── __init__.py
+│   │   ├── sftp_uploader.py
+│   ├── report_manager/
+│   │   ├── __init__.py
+│   │   ├── report_manager.py
+│   ├── log_generate/
+│   │   ├── __init__.py
+│   │   ├── logs.py
 ├── projects/                   # Projetos específicos
-│   ├── __init__.py
-│   ├── project_1.py
-├── reports/                    # Diretório para armazenar relatórios gerados
-│   ├── __init__.py
-│   ├── report_generator.py
-├── logs/                       # Diretório de logs, com logs separados por cliente
-│   ├── cliente_1.log
-│   ├── cliente_2.log
-├── tests/                      # Módulo de testes
-│   ├── __init__.py
-│   ├── test_core.py
-│   ├── test_components.py
-└── venv/                       # Ambiente virtual do Python
+│   ├── synapse_report_api/
+│   │   ├── app.py              # Ponto de entrada da aplicação
+│   │   ├── pyproject.toml
+│   │   ├── ___init__.py
+├── development/                # Diretório de desenvolvimento
+│   ├── .keep
+└─── test/                       # Módulo de testes
+    ├── __init__.py
+
 ```
 
 ## Instalação
@@ -51,7 +63,7 @@ synapse_reports/
 1. Clone o repositório:
 
    ```bash
-   git clone git clone https://AndersonJSilva@bitbucket.org/andersonjsilva/relatorio-pushs-synapse.git
+   git clone https://AndersonJSilva@bitbucket.org/smengineering/psprojects.git
    cd synapse_reports
    ```
 

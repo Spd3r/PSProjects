@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "synapse_report_api"
+version = "0.1.0"
+
+authors = ["Spider <anderson.silva@wake.tech>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+apiClient = { path = "../../components/PSComponents/apiClient" }
+config = { path = "../../components/PSComponents/config" }
+csv_generator = { path = "../../components/PSComponents/csv_generator" }
+log_generate = { path = "../../components/PSComponents/log_generate" }
+report_manager = { path = "../../components/PSComponents/report_manager" }
+s3_uploader = { path = "../../components/PSComponents/s3_uploader" }
+sftp_uploader = { path = "../../components/PSComponents/sftp_uploader" }
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,6 +1,6 @@
 import paramiko
 
-from components.wake.log_generate import Log
+from components.PSComponents.log_generate import Log
 
 
 class SFTPUploader:

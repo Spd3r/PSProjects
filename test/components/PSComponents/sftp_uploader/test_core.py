@@ -1,4 +1,4 @@
-from wake.csv_generator import core
+from PSComponents.sftp_uploader import core
 
 
 def test_sample():

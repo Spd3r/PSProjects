@@ -1,0 +1,1 @@
+poetry run gunicorn --workers 5 projects.synapse_report_api.__main__:app
